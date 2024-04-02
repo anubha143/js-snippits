@@ -11,7 +11,6 @@ var threeSum = function (nums) {
   const result = [];
   let threeSum;
   nums = nums.sort((a, b) => a - b);
-  console.log("sorted num", nums);
   for (let [index, value] of nums.entries()) {
     if (index > 0 && value === nums[index - 1]) {
       continue;

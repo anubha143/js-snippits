@@ -53,37 +53,37 @@
 
 // ##### PROMISE COMBINATORS
 // promise.all -> if any of the promise fails it gonna failed all the promisea.all
-// function importantAction(name) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve(`Hiii ${name}`);
-//     }, 5000);
-//   });
-// }
+function importantAction(name) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(`Hiii ${name}`);
+    }, 5000);
+  });
+}
 
-// function likeTheVideo(video) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve(`Like the ${video}`);
-//     }, 3000);
-//   });
-// }
+function likeTheVideo(video) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Like the ${video}`);
+    }, 3000);
+  });
+}
 
-// function shareTheVideo(video) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve(`Share the ${video}`);
-//     }, 1000);
-//   });
-// }
+function shareTheVideo(video) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Share the ${video}`);
+    }, 1000);
+  });
+}
 
-// Promise.all([
-//   importantAction("Anubha"),
-//   likeTheVideo("Story"),
-//   shareTheVideo("Play"),
-// ])
-//   .then((res) => console.log(res))
-//   .catch((err) => console.error(err));
+Promise.all([
+  importantAction("Anubha"),
+  likeTheVideo("Story"),
+  shareTheVideo("Play"),
+])
+  .then((res) => console.log(res))
+  .catch((err) => console.error(err));
 
 //   ### promise.race -> it returns the promise that get rejected or resolve first
 
@@ -242,16 +242,16 @@
 
 // ### PROMISE QUESTION
 
-const firstPromise = new Promise((resolve, reject) => {
-  resolve("First");
-});
+// const firstPromise = new Promise((resolve, reject) => {
+//   resolve("First");
+// });
 
-const secondPromise = new Promise((resolve, reject) => {
-  resolve(firstPromise);
-});
+// const secondPromise = new Promise((resolve, reject) => {
+//   resolve(firstPromise);
+// });
 
-secondPromise
-  .then((res) => {
-    return res;
-  })
-  .then((res) => console.log(res));
+// secondPromise
+//   .then((res) => {
+//     return res;
+//   })
+//   .then((res) => console.log(res));

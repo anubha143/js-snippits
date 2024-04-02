@@ -41,12 +41,16 @@
 
 // ---------------------------------------------------------------------------------
 
-// for (var i = 0; i < 3; i++) {
-//   let inner = (i) => {
-//     setTimeout(() => console.log(i), i * 1000);
-//   };
-//   inner(i);
-// }
+for (var i = 0; i < 3; i++) {
+  let inner = (i) => {
+    setTimeout(() => console.log(i), i * 1000);
+  };
+  inner(i);
+}
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), i * 1000);
+}
 
 // for (var i = 0; i < 3; i++) {
 //   setTimeout(() => console.log(i), i * 1000);
@@ -88,19 +92,19 @@
 
 // Make this run only once
 
-let view;
-function likeTheVideo() {
-  let called = 0;
-  return function () {
-    if (called > 0) {
-      console.log("Already called");
-    } else {
-      view = "Called once";
-      console.log("this is", view);
-    }
-  };
-}
-let called = likeTheVideo();
-called();
-called();
-called();
+// let view;
+// function likeTheVideo() {
+//   let called = 0;
+//   return function () {
+//     if (called > 0) {
+//       console.log("Already called");
+//     } else {
+//       view = "Called once";
+//       console.log("this is", view);
+//     }
+//   };
+// }
+// let called = likeTheVideo();
+// called();
+// called();
+// called();
