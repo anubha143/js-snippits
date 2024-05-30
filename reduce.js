@@ -33,7 +33,7 @@ const groupedPeople = people.reduce((acc, curr) => {
   acc[key].push(curr);
   return acc;
 }, {});
-console.log("groupedPeople", groupedPeople);
+console.log("groupedPeopleQQQQQQQQ", groupedPeople);
 
 // Merge multiple array into an object
 const keys = ["name", "age", "gender"];

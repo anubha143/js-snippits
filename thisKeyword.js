@@ -109,16 +109,49 @@ console.log(users2.ref().name);
 
 // -------------------------------------------------------------------------------
 
-var length = 4;
-function callback() {
-  console.log(this.length);
-}
+// var length = 4;
+// function callback() {
+//   console.log(this.length);
+// }
 
-const object = {
-  length: 5,
-  method(fn) {
-    fn();
+// const object = {
+//   length: 5,
+//   method(fn) {
+//     fn();
+//   },
+// };
+
+// object.method(callback);
+
+// var length = 4;
+// function callback() {
+//   console.log(this.length);
+// }
+
+// const object = {
+//   length: 5,
+//   method() {
+//     arguments[0]();
+//   },
+// };
+
+// object.method(callback, 1, 2);
+
+const calc = {
+  total: 0,
+  add(a) {
+    this.total += a;
+    return this;
+  },
+  multiply(a) {
+    this.total *= a;
+    return this;
+  },
+  subtract(a) {
+    this.total -= a;
+    return this;
   },
 };
 
-object.method(callback);
+const result = calc.add(10).multiply(5).subtract(30).add(10);
+console.log(result.total);
